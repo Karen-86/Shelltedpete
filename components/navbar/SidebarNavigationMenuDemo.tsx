@@ -13,7 +13,7 @@ export function SidebarNavigationMenuDemo() {
   return (
     <SheetDemo
       title="Menu"
-      description="Lorem ipsum dolor."
+      description="Building Your Dream Home."
       side="left"
       contentClassName=" overflow-y-auto "
       trigger={

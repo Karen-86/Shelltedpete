@@ -26,7 +26,6 @@ export function SheetDemo({
   contentClassName = "",
   title = "",
   description = "",
-  side = "right",
   trigger = null,
   children = null,
 }: SheetDemoProps) {
@@ -37,7 +36,7 @@ export function SheetDemo({
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>{trigger ? trigger : <Button variant="outline">Open</Button>}</SheetTrigger>
-      <SheetContent className={`${contentClassName} `} side={side}>
+      <SheetContent className={`${contentClassName} `} side={'left'}>
         <SheetHeader className="text-left">
           <SheetTitle>{title}</SheetTitle>
           <SheetDescription>{description}</SheetDescription>
