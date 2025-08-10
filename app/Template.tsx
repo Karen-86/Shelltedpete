@@ -52,7 +52,7 @@ const ShowcaseSection = () => {
       id="showcase"
       className="showcase md:min-h-[100vh] h-0 md:h-auto pt-[100%] md:pt-[100px] py-[2rem] flex items-center text-center relative mb-[300px] md:mb-0"
     >
-      <Image width={4825} height={3225} src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
+      <Image  width="4825" height="3225" src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
       {/* <img src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" /> */}
       {/* <h1 className="text-6xl mt-[calc(-100px+2rem)]">Header</h1> */}
       <div className="container max-w-[1180px]">
@@ -153,7 +153,7 @@ const RemodelingSection = () => {
         <div className="group grid lg:grid-cols-3 gap-[30px]  justify-center">
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image
+              <Image 
                 width={1000}
                 height={1000}
                 src={bathroomImage}
@@ -232,7 +232,7 @@ const RemodelingSection = () => {
 
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image
+              <Image 
                 width={1000}
                 height={1000}
                 src={handymanImage}
@@ -312,7 +312,7 @@ const RemodelingSection = () => {
 
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image
+              <Image 
                 width={1000}
                 height={1000}
                 src={kitchenImage}
@@ -428,7 +428,7 @@ const RemodelingSection = () => {
 const ApartmentSection = () => {
   return (
     <section className="apratment md:!min-h-[100vh] !h-0 md:!h-auto !pt-[100%] md:!pt-[0]  relative" id="apartment">
-      <Image width={4825} height={3225} src={coverImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
+      <Image  width={4825} height={3225} src={coverImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
     </section>
   );
 };
@@ -458,7 +458,7 @@ const AboutUsSection = () => {
 
             <div>
               <div className="rounded-md overflow-hidden relative h-0 pt-[110%] w-full ">
-                <Image
+                <Image 
                   width={1000}
                   height={1000}
                   src={ownerImage}
@@ -501,7 +501,7 @@ const AboutUsSection = () => {
             </div>
             <div className=" md:order-1">
               <div className="rounded-md overflow-hidden relative h-0 pt-[60%] w-full ">
-                <Image
+                <Image 
                   width={1000}
                   height={1000}
                   src={teamImage}

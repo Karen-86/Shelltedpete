@@ -1,13 +1,13 @@
 const images = {
-  logo: "/assets/images/logo.jpg",
-  exampleImage: "/assets/images/example.png",
-  headerImage: "/assets/images/rest/image-1.jpg",
-  coverImage: "/assets/images/rest/cover-2.jpg",
-  kitchenImage: "/assets/images/rest/kitchen remodel.jpg",
-  handymanImage: "/assets/images/rest/handyman services.jpeg",
-  bathroomImage: "/assets/images/rest/bathroom remodel.jpg",
-  ownerImage: "/assets/images/rest/Dmitriy+Fadyukhin.jpeg",
-  teamImage: "/assets/images/rest/shelltedpete team .png",
+  logo: "./assets/images/logo.jpg",
+  exampleImage: "./assets/images/example.png",
+  headerImage: "./assets/images/rest/image-1.jpg",
+  coverImage: "./assets/images/rest/cover-2.jpg",
+  kitchenImage: "./assets/images/rest/kitchen remodel.jpg",
+  handymanImage: "./assets/images/rest/handyman services.jpeg",
+  bathroomImage: "./assets/images/rest/bathroom remodel.jpg",
+  ownerImage: "./assets/images/rest/Dmitriy+Fadyukhin.jpeg",
+  teamImage: "./assets/images/rest/shelltedpete team .png",
 };
 
 const localData = {
