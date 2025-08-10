@@ -81,7 +81,7 @@ export function ButtonDemo({
       variant={variant}
       size={size}
       disabled={disabled}
-      className={`${className} ${buttonStyle}`}
+      className={`${className} ${buttonStyle} cursor-pointer`}
       onClick={onClick}
       {...props}
     >

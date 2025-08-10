@@ -21,6 +21,7 @@ const Template = () => {
         <RemodelingSection />
         <ApartmentSection />
         <AboutUsSection />
+        <Testimonial />
       </main>
       <Footer />
     </>
@@ -34,7 +35,7 @@ const ShowcaseSection = () => {
     name: "",
     submitted_email: "",
 
-    problems: "",
+    description: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -47,7 +48,10 @@ const ShowcaseSection = () => {
   };
 
   return (
-    <header id='showcase' className="showcase md:min-h-[100vh] h-0 md:h-auto pt-[100%] md:pt-[100px] py-[2rem] flex items-center text-center relative mb-[300px] md:mb-0">
+    <header
+      id="showcase"
+      className="showcase md:min-h-[100vh] h-0 md:h-auto pt-[100%] md:pt-[100px] py-[2rem] flex items-center text-center relative mb-[300px] md:mb-0"
+    >
       <Image width={4825} height={3225} src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
       {/* <img src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" /> */}
       {/* <h1 className="text-6xl mt-[calc(-100px+2rem)]">Header</h1> */}
@@ -59,7 +63,23 @@ const ShowcaseSection = () => {
             id="contact-form-2 "
             action="#/"
             method="POST"
-            onSubmit={(e) =>
+            onSubmit={(e) => {
+              // EXTRA start
+              const form = e.target as any;
+
+              const name = form.name?.value?.trim();
+              const submittedEmail = form.submitted_email?.value?.trim();
+              const description = form.description?.value?.trim();
+              const image = form.image?.defaultValue;
+
+              const CONTENT =
+                (name ? `<p><strong>Name</strong>: ${name}</p>` : "") +
+                (submittedEmail ? `<p><strong>Email</strong>: ${submittedEmail}</p>` : "") +
+                (description ? `<p><strong>Description</strong>: ${description}</p>` : "") +
+                (image ? `<img src="${image}" width='90' height='90' />` : "");
+              form.CONTENT.value = CONTENT;
+              // EXTRA end
+
               sendEmail({
                 event: e,
                 service: "service_m0znoir",
@@ -67,8 +87,8 @@ const ShowcaseSection = () => {
                 form: e.target,
                 public_key: "XROQkLsbKgfMPUjh6",
                 setIsLoading: setIsLoading,
-              })
-            }
+              });
+            }}
           >
             <InputDemo
               placeholder="Jane"
@@ -98,13 +118,21 @@ const ShowcaseSection = () => {
               placeholder="Your answear"
               className="mb-6"
               textareaClassName="py-3 min-h-[100px]"
-              name="problems"
+              name="description"
               type="text"
               // required={true}
-              value={state.problems}
+              value={state.description}
               callback={(e) => handleOnChange(e)}
             />
 
+            <input
+              type="text"
+              name="image"
+              defaultValue="https://shelltedpete.vercel.app/assets/images/logo.jpg"
+              className="hidden"
+            />
+            <input type="text" name="CONTENT" className="hidden" />
+            <input type="text" name="to_email" defaultValue="info@shelltedpete.com" className="hidden" />
             <ButtonDemo disabled={isLoading} text="Submit" className="w-full py-5" />
           </form>
         </div>
@@ -412,7 +440,7 @@ const AboutUsSection = () => {
         <div className="group">
           <div className="grid md:grid-cols-[1.5fr_1fr] items-center gap-x-[10%]">
             <div className="max-w-[500px] relative ">
-              <div className="h-[110px] absolute top-[-20px] z-[-1] left-0">{quotesIcon}</div>
+              <div className="h-[110px] absolute top-[-20px] z-[-1] left-0 text-[rgba(227,233,239,.7)]">{quotesIcon}</div>
               <h4 className="text-2xl font-bold font-sans mb-5">Message From The Owner</h4>
               <p>
                 <strong>Hi, I’m Dmitriy Fadyukhin, </strong> the founder and owner of
@@ -459,7 +487,7 @@ const AboutUsSection = () => {
         <div className="group">
           <div className="grid md:grid-cols-[1.5fr_1fr] items-center gap-x-[10%] mb-2">
             <div className="max-w-[500px] relative md:order-2">
-              <div className="h-[110px] absolute top-[-20px] z-[-1] left-0 ">{quotesIcon}</div>
+              <div className="h-[110px] absolute top-[-20px] z-[-1] left-0 text-[rgba(227,233,239,.7)]">{quotesIcon}</div>
               <h4 className="text-2xl font-bold font-sans mb-5">Meet Our Crew</h4>
               <p>
                 <strong>
@@ -483,6 +511,25 @@ const AboutUsSection = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Testimonial = () => {
+  return (
+    <section className="relative">
+      <div className="line absolute h-px w-full bg-[rgba(227,233,239,1)] top-[50%] transform-[translateY(-50%)]"></div>
+      <div className="container">
+        <div className="testimonial shadow relative bg-[#151515] text-white max-w-[800px] rounded-[20px] mx-auto px-8 sm:px-15 py-25 sm:py-40 ">
+          <div className="h-[18px]  top-[-20px] z-[-1] left-0 text-white mb-2">{quotesIcon}</div>
+          <p className="testimonial-text text-lg sm:text-2xl">
+            Dmitriy is a highly skilled professional capable of completing a variety of jobs. He is a great communicator, shows up
+            on time, keeps a tidy work space and is transparent with his pricing. My clients have all been pleased with his work.
+          </p>
+          <br />
+          <h2 className="">Stacey Enos</h2>
         </div>
       </div>
     </section>

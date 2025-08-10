@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}  ${lora.variable} ${varelaRound.variable} antialiased`}>
+      <body className={`  ${lora.variable} ${varelaRound.variable} antialiased`}>
         <Provider>
           {children}
           <Toaster />

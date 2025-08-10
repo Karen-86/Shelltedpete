@@ -40,29 +40,19 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="flex gap-10">
-              <ul className="flex flex-col gap-2">
-                <a href="#services" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
-                  Services
-                </a>
-                <a href="#about-us" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
-                  About Us
-                </a>
-                <a href="#showcase" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
-                  Contact
-                </a>
-              </ul>
-              <ul className="flex flex-col gap-2">
-                <a href="#contact" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
-                  Clients
-                </a>
-                <a href="#contact" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
-                  Case studies
-                </a>
-              </ul>
-            </div>
+            <ul className="flex flex-col gap-2 flex-1">
+              <a href="#services" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
+                Services
+              </a>
+              <a href="#about-us" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
+                About Us
+              </a>
+              <a href="#showcase" className=" text-dark font-medium  hover:text-secondary-2 duration-300">
+                Contact
+              </a>
+            </ul>
 
-            <ul className="lg:ml-auto">
+            <ul className="">
               <li className="text-secondary-2 mb-2"> Shelltedpete Handyman (serving Asheville NC area)</li>
               <li className="text-secondary-2 mb-2">340 Merrimon Avenue, Asheville NC 28801</li>
               <li className="text-secondary-2 mb-2">info @ shelltedpete.com</li>
