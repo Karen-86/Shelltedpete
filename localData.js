@@ -1,7 +1,8 @@
 const images = {
   logo: "./assets/images/logo.jpg",
   exampleImage: "./assets/images/example.png",
-  headerImage: "./assets/images/rest/image-1.jpg",
+  // headerImage: "./assets/images/rest/image-1.jpg",
+  headerImage: "./assets/images/rest/image-1.webp",
   // coverImage: "./assets/images/rest/cover-2.jpg",
   coverImage: "./assets/images/rest/deck.jpeg",
   kitchenImage: "./assets/images/rest/kitchen remodel.webp",
