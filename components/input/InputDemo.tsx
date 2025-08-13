@@ -38,7 +38,7 @@ export function InputDemo({
   return (
     <div className={`field grid items-center gap-0.5 ${className}`}>
       {label && (
-        <Label htmlFor={id} className=" font-medium text-xs">
+        <Label htmlFor={id} className=" font-bold font-sans text-xs">
           {label}
         </Label>
       )}

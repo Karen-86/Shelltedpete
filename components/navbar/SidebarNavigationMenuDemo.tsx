@@ -18,7 +18,7 @@ export function SidebarNavigationMenuDemo() {
       contentClassName=" overflow-y-auto "
       trigger={
         <Button size="icon" variant="ghost" className="lg:hidden text-white cursor-pointer">
-          <Menu />
+          <Menu className="scale-[1.5]"/>
         </Button>
       }
     >

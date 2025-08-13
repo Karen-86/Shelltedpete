@@ -50,104 +50,115 @@ const ShowcaseSection = () => {
   return (
     <header
       id="showcase"
-      className="showcase md:min-h-[100vh] h-0 md:h-auto pt-[100%] md:pt-[100px] py-[2rem] flex items-center text-center relative mb-[300px] md:mb-0"
+      className="showcase md:min-h-[100vh]  pt-[170px] py-[2rem] flex items-center  relative mb-[50px] lg:mb-[100px]"
     >
+      <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
       <Image width="4825" height="3225" src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
       {/* <img src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" /> */}
       {/* <h1 className="text-6xl mt-[calc(-100px+2rem)]">Header</h1> */}
-      <div className="container max-w-[1180px]">
-        <div className=" relative bg-white max-w-[370px] rounded-md py-10 px-8 shadow-md ml-auto mr-auto md:mr-0">
-          <h2 className="text-left text-2xl font-bold mb-[2rem] text-dark font-lora ">Contact Us Today</h2>
-          <form
-            className=" "
-            id="contact-form-2 "
-            action="#/"
-            method="POST"
-            onSubmit={(e) => {
-              // EXTRA start
-              const form = e.target as any;
+      <div className="container  max-w-[1536px]">
+        <div className="showcase-content flex flex-col lg:flex-row items-center relative z-2">
+          <h1 className=" text-[7vw] lg:text-[6vw]    mb-[2rem] text-center lg:text-left leading-[1.1] lg:max-w-[400px] 4xl:!max-w-full font-sans font-bold text-white text-shadow-lg ">
+            Shelltedpete<br/> Asheville Handyman
+          </h1>
+          <div className="lg:absolute 4xl:!relative lg:right-0 top-auto bottom-auto lg:mb-[-70px]  bg-success text-white max-w-[480px]  py-9 px-6 shadow-md ">
+            <h2 className="text-[0.9rem] lg:text-[1.35rem] font-bold mb-[1rem]  font-sans uppercase leading-[1.2] ">
+              Expert Asheville Handyman Services for the Home or Business
+            </h2>
+            <h3 className="text-left text-[1rem] lg:text-[1.25rem] font-medium mb-[1rem]  font-sans   ">
+              Schedule a Service or Request a FREE Estimate Now:
+            </h3>
+            <form
+              className=" text-left"
+              id="contact-form-2 "
+              action="#/"
+              method="POST"
+              onSubmit={(e) => {
+                // EXTRA start
+                const form = e.target as any;
 
-              const name = form.name?.value?.trim();
-              const submittedEmail = form.submitted_email?.value?.trim();
-              const phone = form.phone?.value?.trim();
-              const description = form.description?.value?.trim();
-              const image = form.image?.defaultValue;
+                const name = form.name?.value?.trim();
+                const submittedEmail = form.submitted_email?.value?.trim();
+                const phone = form.phone?.value?.trim();
+                const description = form.description?.value?.trim();
+                const image = form.image?.defaultValue;
 
-              const CONTENT =
-                (name ? `<p><strong>Name</strong>: ${name}</p>` : "") +
-                (submittedEmail ? `<p><strong>Email</strong>: ${submittedEmail}</p>` : "") +
-                (phone ? `<p><strong>Phone</strong>: ${phone}</p>` : "") +
-                (description ? `<p><strong>Description</strong>: ${description}</p>` : "") +
-                (image ? `<img src="${image}" width='90' height='90' />` : "");
-              form.CONTENT.value = CONTENT;
-              // EXTRA end
+                const CONTENT =
+                  (name ? `<p><strong>Name</strong>: ${name}</p>` : "") +
+                  (submittedEmail ? `<p><strong>Email</strong>: ${submittedEmail}</p>` : "") +
+                  (phone ? `<p><strong>Phone</strong>: ${phone}</p>` : "") +
+                  (description ? `<p><strong>Description</strong>: ${description}</p>` : "") +
+                  (image ? `<img src="${image}" width='90' height='90' />` : "");
+                form.CONTENT.value = CONTENT;
+                // EXTRA end
 
-              sendEmail({
-                event: e,
-                service: "service_m0znoir",
-                template: "template_u1lzg8d",
-                form: e.target,
-                public_key: "XROQkLsbKgfMPUjh6",
-                setIsLoading: setIsLoading,
-              });
-            }}
-          >
-            <InputDemo
-              placeholder="Jane"
-              className="mb-5"
-              inputClassName="py-5"
-              name="name"
-              type="text"
-              label="Your Name"
-              required={true}
-              value={state.name}
-              callback={(e) => handleOnChange(e)}
-            />
-            <InputDemo
-              placeholder="jane@company.com"
-              className="mb-5"
-              inputClassName="py-5"
-              name="submitted_email"
-              type="text"
-              label="Your Email"
-              required={true}
-              value={state.submitted_email}
-              callback={(e) => handleOnChange(e)}
-            />
-            <InputDemo
-              placeholder="‪(999) 999-9999"
-              className="mb-5"
-              inputClassName="py-5"
-              name="phone"
-              type="tel"
-              label="Your Phone"
-              required={true}
-              value={state.phone}
-              callback={(e) => handleOnChange(e)}
-            />
+                sendEmail({
+                  event: e,
+                  service: "service_m0znoir",
+                  template: "template_u1lzg8d",
+                  form: e.target,
+                  public_key: "XROQkLsbKgfMPUjh6",
+                  setIsLoading: setIsLoading,
+                });
+              }}
+            >
+              <InputDemo
+                placeholder="Jane"
+                className="mb-5"
+                inputClassName="py-[1.2rem] rounded-[0] bg-white text-dark"
+                name="name"
+                type="text"
+                label="Your Name"
+                required={true}
+                value={state.name}
+                callback={(e) => handleOnChange(e)}
+              />
+              <InputDemo
+                placeholder="jane@company.com"
+                className="mb-5"
+                inputClassName="py-[1.2rem] rounded-[0] bg-white text-dark"
+                name="submitted_email"
+                type="text"
+                label="Your Email"
+                required={true}
+                value={state.submitted_email}
+                callback={(e) => handleOnChange(e)}
+              />
+              <InputDemo
+                placeholder="‪(999) 999-9999"
+                className="mb-5"
+                inputClassName="py-[1.2rem] rounded-[0] bg-white text-dark"
+                name="phone"
+                type="tel"
+                label="Your Phone"
+                required={true}
+                value={state.phone}
+                callback={(e) => handleOnChange(e)}
+              />
 
-            <TextareaDemo
-              label="Describe your project"
-              placeholder="Your answer"
-              className="mb-5"
-              textareaClassName="py-3 min-h-[100px]"
-              name="description"
-              type="text"
-              // required={true}
-              value={state.description}
-              callback={(e) => handleOnChange(e)}
-            />
+              <TextareaDemo
+                label="Describe your project"
+                placeholder="Your answer"
+                className="mb-5"
+                textareaClassName="py-[0.5rem] min-h-[100px]  rounded-[0] bg-white text-dark"
+                name="description"
+                type="text"
+                // required={true}
+                value={state.description}
+                callback={(e) => handleOnChange(e)}
+              />
 
-            <input
-              type="text"
-              name="image"
-              defaultValue="https://shelltedpete.vercel.app/assets/images/logo.jpg"
-              className="hidden"
-            />
-            <input type="text" name="CONTENT" className="hidden" />
-            <input type="text" name="to_email" defaultValue="info@shelltedpete.com" className="hidden" />
-            <ButtonDemo disabled={isLoading} text="Submit" className="w-full py-5" />
-          </form>
+              <input
+                type="text"
+                name="image"
+                defaultValue="https://shelltedpete.vercel.app/assets/images/logo.jpg"
+                className="hidden"
+              />
+              <input type="text" name="CONTENT" className="hidden" />
+              <input type="text" name="to_email" defaultValue="info@shelltedpete.com" className="hidden" />
+              <ButtonDemo disabled={isLoading} text="Submit" className="!mr-auto py-5" />
+            </form>
+          </div>
         </div>
       </div>
     </header>
@@ -535,7 +546,9 @@ const Testimonial = () => {
     <section className="">
       {/* <div className="line absolute h-px w-full bg-[rgba(227,233,239,1)] top-[50%] transform-[translateY(-50%)]"></div> */}
       <div className="container">
-        <h1 className="text-2xl  font-sans  mb-5 text-center font-bold ">Google Reviews for Shelltedpete – Asheville Handyman Services</h1>
+        <h1 className="text-2xl  font-sans  mb-5 text-center font-bold ">
+          Google Reviews for Shelltedpete – Asheville Handyman Services
+        </h1>
         <div className="testimonial  shadow relative bg-[#151515] text-white   mx-auto px-8 sm:px-15 py-15 lg:py-28">
           <div className="testimonial-content max-w-[800px] mx-auto">
             <div className="stars flex justify-center  mb-5">
@@ -556,7 +569,6 @@ const Testimonial = () => {
             <h2 className="text-center font-thin text-success">Stacey Enos</h2>
           </div>
         </div>
-        
       </div>
     </section>
   );

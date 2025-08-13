@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-gray-50  min-h-[300px] pb-[3rem] pt-[3rem] font-sans">
       <div className="container">
         <div className="content">
-          <div className="group flex items-center gap-20  flex-wrap">
+          <div className="group flex items-center gap-x-20 gap-y-10  flex-wrap">
             <div>
               <img src={logo} alt="" className="max-w-[50px] h-auto border-4 border-secondary-2 min-w-[60px] mb-5" />
               <p className="text-xs text-secondary-2 text-thin max-w-[280px] mb-8 leading-[1.5]">

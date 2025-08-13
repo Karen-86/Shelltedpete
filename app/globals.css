@@ -54,7 +54,7 @@
   --color-secondary: var(--secondary);
   --color-secondary-2: var(--secondary-2);
   --color-success: var(--success);
-  
+  --breakpoint-4xl: 1600px;
 }
 
 :root {

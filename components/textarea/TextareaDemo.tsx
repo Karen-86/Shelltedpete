@@ -36,7 +36,7 @@ export function TextareaDemo({
 
   return (
     <div className={`field grid items-center gap-1.5 ${className}`}>
-      {label && <Label htmlFor={id} className="text-xs">{label}</Label>}
+      {label && <Label htmlFor={id} className="text-xs font-bold font-sans">{label}</Label>}
       <Textarea
         required={required}
         id={id}
