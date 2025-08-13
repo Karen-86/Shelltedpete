@@ -51,6 +51,7 @@ Wall Renovation: Fresh paint`,
     images: [`${siteUrl}/assets/images/og-image.jpg`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
     locale: "en_US",
     type: "website",
+    
   },
   twitter: {
     card: "summary_large_image",
