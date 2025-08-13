@@ -48,7 +48,7 @@ Wall Renovation: Fresh paint`,
     description: "This is the sheet page for managing your content.",
     url: `${siteUrl}`,
     siteName: "Your Website Name",
-    images: [`${siteUrl}/assets/images/twitter-image.png`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
+    images: [`${siteUrl}/assets/images/og-image.jpg`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
     locale: "en_US",
     type: "website",
   },
