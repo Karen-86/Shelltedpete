@@ -53,6 +53,7 @@
   --font-lora: var(--font-lora);
   --color-secondary: var(--secondary);
   --color-secondary-2: var(--secondary-2);
+  --color-success: var(--success);
   
 }
 
@@ -92,6 +93,7 @@
 
   --dark: rgb(14, 19, 24);
   --secondary: #444444;
+  --success: rgb(46, 74, 61);
   --secondary-2: rgb(133, 140, 151);
 }
 

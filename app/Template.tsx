@@ -8,7 +8,7 @@ import localData from "@/localData";
 import { useGlobalContext } from "@/context";
 
 const { headerImage, kitchenImage, handymanImage, bathroomImage, coverImage, ownerImage, teamImage } = localData.images;
-const { leadingLeftIcon, leadingRightIcon, quotesIcon } = localData.svgs;
+const { leadingLeftIcon, leadingRightIcon, quotesIcon, starIcon } = localData.svgs;
 
 const Template = () => {
   return (
@@ -34,7 +34,7 @@ const ShowcaseSection = () => {
   const [state, setState] = useState({
     name: "",
     submitted_email: "",
-
+    phone: "",
     description: "",
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -52,11 +52,11 @@ const ShowcaseSection = () => {
       id="showcase"
       className="showcase md:min-h-[100vh] h-0 md:h-auto pt-[100%] md:pt-[100px] py-[2rem] flex items-center text-center relative mb-[300px] md:mb-0"
     >
-      <Image  width="4825" height="3225" src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
+      <Image width="4825" height="3225" src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
       {/* <img src={headerImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" /> */}
       {/* <h1 className="text-6xl mt-[calc(-100px+2rem)]">Header</h1> */}
       <div className="container max-w-[1180px]">
-        <div className=" relative bg-white max-w-[370px] rounded-md py-10 px-8 font-sans shadow-md ml-auto mr-auto md:mr-0">
+        <div className=" relative bg-white max-w-[370px] rounded-md py-10 px-8 shadow-md ml-auto mr-auto md:mr-0">
           <h2 className="text-left text-2xl font-bold mb-[2rem] text-dark font-lora ">Contact Us Today</h2>
           <form
             className=" "
@@ -69,12 +69,14 @@ const ShowcaseSection = () => {
 
               const name = form.name?.value?.trim();
               const submittedEmail = form.submitted_email?.value?.trim();
+              const phone = form.phone?.value?.trim();
               const description = form.description?.value?.trim();
               const image = form.image?.defaultValue;
 
               const CONTENT =
                 (name ? `<p><strong>Name</strong>: ${name}</p>` : "") +
                 (submittedEmail ? `<p><strong>Email</strong>: ${submittedEmail}</p>` : "") +
+                (phone ? `<p><strong>Phone</strong>: ${phone}</p>` : "") +
                 (description ? `<p><strong>Description</strong>: ${description}</p>` : "") +
                 (image ? `<img src="${image}" width='90' height='90' />` : "");
               form.CONTENT.value = CONTENT;
@@ -92,8 +94,8 @@ const ShowcaseSection = () => {
           >
             <InputDemo
               placeholder="Jane"
-              className="mb-6"
-              inputClassName="py-6"
+              className="mb-5"
+              inputClassName="py-5"
               name="name"
               type="text"
               label="Your Name"
@@ -103,8 +105,8 @@ const ShowcaseSection = () => {
             />
             <InputDemo
               placeholder="jane@company.com"
-              className="mb-6"
-              inputClassName="py-6"
+              className="mb-5"
+              inputClassName="py-5"
               name="submitted_email"
               type="text"
               label="Your Email"
@@ -112,11 +114,22 @@ const ShowcaseSection = () => {
               value={state.submitted_email}
               callback={(e) => handleOnChange(e)}
             />
+            <InputDemo
+              placeholder="‪(999) 999-9999"
+              className="mb-5"
+              inputClassName="py-5"
+              name="phone"
+              type="tel"
+              label="Your Phone"
+              required={true}
+              value={state.phone}
+              callback={(e) => handleOnChange(e)}
+            />
 
             <TextareaDemo
               label="Describe your project"
-              placeholder="Your answear"
-              className="mb-6"
+              placeholder="Your answer"
+              className="mb-5"
               textareaClassName="py-3 min-h-[100px]"
               name="description"
               type="text"
@@ -153,7 +166,7 @@ const RemodelingSection = () => {
         <div className="group grid lg:grid-cols-3 gap-[30px]  justify-center">
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image 
+              <Image
                 width={1000}
                 height={1000}
                 src={bathroomImage}
@@ -232,7 +245,7 @@ const RemodelingSection = () => {
 
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image 
+              <Image
                 width={1000}
                 height={1000}
                 src={handymanImage}
@@ -312,7 +325,7 @@ const RemodelingSection = () => {
 
           <div className="remodel max-w-[500px]">
             <div className="remodel-cover relative w-full h-0 pt-[56.25%] shadow rounded-md overflow-hidden mb-[1rem]">
-              <Image 
+              <Image
                 width={1000}
                 height={1000}
                 src={kitchenImage}
@@ -428,7 +441,7 @@ const RemodelingSection = () => {
 const ApartmentSection = () => {
   return (
     <section className="apratment md:!min-h-[100vh] !h-0 md:!h-auto !pt-[100%] md:!pt-[0]  relative" id="apartment">
-      <Image  width={4825} height={3225} src={coverImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
+      <Image width={4825} height={3225} src={coverImage} alt="" className="absolute top-0 left-0 w-full h-full object-cover" />
     </section>
   );
 };
@@ -458,7 +471,7 @@ const AboutUsSection = () => {
 
             <div>
               <div className="rounded-md overflow-hidden relative h-0 pt-[110%] w-full ">
-                <Image 
+                <Image
                   width={1000}
                   height={1000}
                   src={ownerImage}
@@ -501,7 +514,7 @@ const AboutUsSection = () => {
             </div>
             <div className=" md:order-1">
               <div className="rounded-md overflow-hidden relative h-0 pt-[60%] w-full ">
-                <Image 
+                <Image
                   width={1000}
                   height={1000}
                   src={teamImage}
@@ -519,18 +532,31 @@ const AboutUsSection = () => {
 
 const Testimonial = () => {
   return (
-    <section className="relative">
-      <div className="line absolute h-px w-full bg-[rgba(227,233,239,1)] top-[50%] transform-[translateY(-50%)]"></div>
+    <section className="">
+      {/* <div className="line absolute h-px w-full bg-[rgba(227,233,239,1)] top-[50%] transform-[translateY(-50%)]"></div> */}
       <div className="container">
-        <div className="testimonial shadow relative bg-[#151515] text-white max-w-[800px] rounded-[20px] mx-auto px-8 sm:px-15 py-25 sm:py-40 ">
-          <div className="h-[18px]  top-[-20px] z-[-1] left-0 text-white mb-2">{quotesIcon}</div>
-          <p className="testimonial-text text-lg sm:text-2xl">
-            Dmitriy is a highly skilled professional capable of completing a variety of jobs. He is a great communicator, shows up
-            on time, keeps a tidy work space and is transparent with his pricing. My clients have all been pleased with his work.
-          </p>
-          <br />
-          <h2 className="">Stacey Enos</h2>
+        <h1 className="text-2xl  font-sans  mb-5 text-center font-bold ">Google Reviews for Shelltedpete – Asheville Handyman Services</h1>
+        <div className="testimonial  shadow relative bg-[#151515] text-white   mx-auto px-8 sm:px-15 py-15 lg:py-28">
+          <div className="testimonial-content max-w-[800px] mx-auto">
+            <div className="stars flex justify-center  mb-5">
+              <div className="w-[20px] fill-success">{starIcon}</div>
+              <div className="w-[20px] fill-success">{starIcon}</div>
+              <div className="w-[20px] fill-success">{starIcon}</div>
+              <div className="w-[20px] fill-success">{starIcon}</div>
+              <div className="w-[20px] fill-success">{starIcon}</div>
+            </div>
+            <h3 className="text-center font-bold text-[1.2rem] tracking-wide mb-5">"Great Service"</h3>
+            <p className="testimonial-text text-center mb-3">
+              {/* <div className="h-[18px]  top-[-20px] z-[-1] left-0 text-white mb-2">{quotesIcon}</div> */}
+              Dmitriy is a highly skilled professional capable of completing a variety of jobs. He is a great communicator, shows
+              up on time, keeps a tidy work space and is transparent with his pricing. My clients have all been pleased with his
+              work.
+            </p>
+            <br />
+            <h2 className="text-center font-thin text-success">Stacey Enos</h2>
+          </div>
         </div>
+        
       </div>
     </section>
   );

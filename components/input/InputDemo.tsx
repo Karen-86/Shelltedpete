@@ -36,7 +36,7 @@ export function InputDemo({
   };
 
   return (
-    <div className={`field grid items-center gap-1.5 ${className}`}>
+    <div className={`field grid items-center gap-0.5 ${className}`}>
       {label && (
         <Label htmlFor={id} className=" font-medium text-xs">
           {label}
@@ -51,7 +51,7 @@ export function InputDemo({
         value={value}
       />
       {/* <div className="valid-feedback text-green-600 text-sm">{successMessage}</div> */}
-      <div className="invalid-feedback text-red-600 text-xs">{errorMessage}</div>
+      {/* <div className="invalid-feedback text-red-600 text-xs">{errorMessage}</div> */}
     </div>
   );
 }

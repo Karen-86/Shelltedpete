@@ -1,15 +1,15 @@
 const images = {
-  logo: "./assets/images/logo.jpg",
-  exampleImage: "./assets/images/example.png",
-  // headerImage: "./assets/images/rest/image-1.jpg",
-  headerImage: "./assets/images/rest/image-1.webp",
-  // coverImage: "./assets/images/rest/cover-2.jpg",
-  coverImage: "./assets/images/rest/deck.jpeg",
-  kitchenImage: "./assets/images/rest/kitchen remodel.webp",
-  handymanImage: "./assets/images/rest/handyman services.jpeg",
-  bathroomImage: "./assets/images/rest/bathroom remodel.jpg",
-  ownerImage: "./assets/images/rest/Dmitriy+Fadyukhin.jpeg",
-  teamImage: "./assets/images/rest/shelltedpete team .png",
+  logo: "/assets/images/logo.jpg",
+  exampleImage: "/assets/images/example.png",
+  // headerImage: "/assets/images/rest/image-1.jpg",
+  headerImage: "/assets/images/rest/image-1.webp",
+  // coverImage: "/assets/images/rest/cover-2.jpg",
+  coverImage: "/assets/images/rest/deck.jpeg",
+  kitchenImage: "/assets/images/rest/kitchen remodel.webp",
+  handymanImage: "/assets/images/rest/handyman services.jpeg",
+  bathroomImage: "/assets/images/rest/bathroom remodel.jpg",
+  ownerImage: "/assets/images/rest/Dmitriy+Fadyukhin.jpeg",
+  teamImage: "/assets/images/rest/shelltedpete team .png",
 };
 
 const localData = {
@@ -133,6 +133,11 @@ const localData = {
     linkedinIcon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
         <path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z" />
+      </svg>
+    ),
+    starIcon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z" />
       </svg>
     ),
   },
