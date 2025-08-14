@@ -546,9 +546,9 @@ const Testimonial = () => {
     <section className="">
       {/* <div className="line absolute h-px w-full bg-[rgba(227,233,239,1)] top-[50%] transform-[translateY(-50%)]"></div> */}
       <div className="container">
-        <h1 className="text-2xl  font-sans  mb-5 text-center font-bold ">
+        <h2 className="text-2xl  font-sans  mb-5 text-center font-bold ">
           Google Reviews for Shelltedpete – Asheville Handyman Services
-        </h1>
+        </h2>
         <div className="testimonial  shadow relative bg-[#151515] text-white   mx-auto px-8 sm:px-15 py-15 lg:py-28">
           <div className="testimonial-content max-w-[800px] mx-auto">
             <div className="stars flex justify-center  mb-5">
