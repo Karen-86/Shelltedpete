@@ -49,7 +49,7 @@ Wall Renovation: Fresh paint`,
     description: "This is the sheet page for managing your content.",
     url: `${siteUrl}`,
     siteName: "Your Website Name",
-    images: [`${siteUrl}/assets/images/twitter-image.png`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
+    images: [`/assets/images/twitter-image.png`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
     locale: "en_US",
     type: "website",
   },
@@ -57,7 +57,7 @@ Wall Renovation: Fresh paint`,
     card: "summary_large_image",
     title: "Sheet - Your Website Name",
     description: "This is the sheet page for managing your content.",
-    images: [`${siteUrl}/assets/images/twitter-image.png`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
+    images: [`/assets/images/twitter-image.png`], //recomened sizes 1200x630, 1080 × 566, 600 × 315 | aspect ratio 1.91:1
   },
 };
 
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <head>
+      <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPY0ZTZS0Z"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -80,7 +80,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </head> */}
+      </head>
       <body className={`  ${lora.variable} ${varelaRound.variable} ${geistSans.variable} antialiased`}>
         <Provider>
           {children}
