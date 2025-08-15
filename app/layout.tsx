@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPY0ZTZS0Z"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -80,7 +80,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
+      </head> */}
       <body className={`  ${lora.variable} ${varelaRound.variable} ${geistSans.variable} antialiased`}>
         <Provider>
           {children}
